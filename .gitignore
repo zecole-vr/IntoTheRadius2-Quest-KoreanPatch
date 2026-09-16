@@ -1,0 +1,20 @@
+# Private game data and local working files
+userdata/
+.tools/
+work/
+_work/
+backup*/
+*.obb*
+*.apk
+*.sav
+*.log
+*.zip
+*.exe
+*.dll
+*.bin
+data/
+__pycache__/
+*.pyc
+.venv/
+build/
+dist/

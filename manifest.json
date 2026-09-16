@@ -1,0 +1,23 @@
+{
+  "format": 1,
+  "name": "ITR2 Quest Korean",
+  "release": "1.2.2-RC2-EASY-REVIEW",
+  "publication_status": "AUTHOR_PERMISSION_PENDING",
+  "package": "com.CMGames.IntoTheRadius2",
+  "version_code": 473002,
+  "version_name": "1.2.2",
+  "main_name": "main.473002.com.CMGames.IntoTheRadius2.obb",
+  "main_bytes": 4135612064,
+  "source_sha256": "660324054c29461c66fb23740764c4bb2e6f1db3bff8fc38c53cb1bc0a1938a0",
+  "target_sha256": "f4d39642136feefe6be71cd25f7315d9e1260c955bdcd73b809aae1f9a1358e3",
+  "patch_name": "patch.473002.com.CMGames.IntoTheRadius2.obb",
+  "patch_bytes": 2032590216,
+  "patch_sha256": "678869b376f81a4c0338c8606202952397515e2b71005815e94374bb01fbd4c4",
+  "payload_sha256": "5e9c65acfc5898606c6a38ac2090e941112947a3a75882fa5cda22aef5c110bc",
+  "recipe_sha256": "bb5c886f4627f0e228e3574b15a90c3334cb8eabaf11ced6e39bc7225c29c370",
+  "zlib_reference": "1.2.13",
+  "recipe_ops": 15124,
+  "payload_bytes": 8957875,
+  "regenerated_original_font": "LastResort.ttf; not included in release",
+  "runtime_baseline": "Exact SHA-256 of user-tested trial4 output"
+}

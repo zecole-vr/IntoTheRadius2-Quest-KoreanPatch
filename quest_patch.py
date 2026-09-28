@@ -2,7 +2,7 @@
 """ITR2 Quest Korean patch installer. Python 3.10+, standard library only.
 
 Installer code: MIT (licenses/INSTALLER-MIT.txt).
-Payload/translation rights: see RELEASE_CHECKLIST.md; publication permission pending.
+Translation strings used with permission; see THIRD_PARTY_NOTICES.md.
 No APK installation, account access, or save restoration.
 """
 from __future__ import annotations
@@ -91,7 +91,7 @@ def prepare_adb(root=ROOT):
         staging = Path(tempfile.mkdtemp(prefix='download-', dir=home)).resolve()
         try:
             archive = staging / 'platform-tools.zip'
-            request = urllib.request.Request(ADB_URL, headers={'User-Agent': 'ITR2QuestKorean-RC2'})
+            request = urllib.request.Request(ADB_URL, headers={'User-Agent': 'ITR2QuestKorean-RC1'})
             say('ADB 다운로드 중...')
             with urllib.request.urlopen(request, timeout=30) as response, archive.open('xb') as f:
                 if not response.geturl().startswith('https://dl.google.com/'):
@@ -166,7 +166,7 @@ def build(source, output, root=ROOT):
         raise PatchError('원본과 결과 경로는 달라야 합니다.')
     say('원본 main OBB 체크섬 확인 중...')
     if source.stat().st_size != m['main_bytes'] or sha256(source) != m['source_sha256']:
-        raise PatchError('지원하는 1.2.2 / 473002 원본이 아닙니다. 수정하거나 설치하지 않았습니다.')
+        raise PatchError('지원하는 1.2.3 / 478362 원본이 아닙니다. 수정하거나 설치하지 않았습니다.')
     if output.exists():
         if sha256(output) == m['target_sha256']:
             say('이미 검증된 결과 파일이 있습니다.')
@@ -212,12 +212,12 @@ def build(source, output, root=ROOT):
             dst.flush()
             os.fsync(dst.fileno())
         if written != m['main_bytes'] or digest.hexdigest() != m['target_sha256']:
-            raise PatchError('생성 결과가 검증된 4차 수정본과 다릅니다. 설치를 중단했습니다.')
+            raise PatchError('생성 결과가 검증된 1.2.3 시험본과 다릅니다. 설치를 중단했습니다.')
         # A concurrent process must not replace an existing user file.
         if output.exists():
             raise PatchError('결과 경로에 파일이 생겨 덮어쓰기를 중단했습니다.')
         temp.rename(output)
-        say('완료: 결과 SHA-256이 실제 플레이 확인본과 일치합니다.')
+        say('완료: 결과 SHA-256이 새 버전 PC 검증본과 일치합니다.')
         return output
     finally:
         if temp.exists():
@@ -301,7 +301,7 @@ def version_check(adb, m):
     text, _ = adb.shell('dumpsys', 'package', m['package'])
     match = re.search(r'\bversionCode=(\d+)', text)
     if not match or int(match.group(1)) != m['version_code']:
-        raise PatchError('대상 게임은 Quest 1.2.2 / 473002만 지원합니다. 다른 버전은 변경하지 않습니다.')
+        raise PatchError('대상 게임은 Quest 1.2.3 / 478362만 지원합니다. 다른 버전은 변경하지 않습니다.')
 
 def stopped(adb, m):
     out, _ = adb.shell('pidof', m['package'], check=False)
@@ -316,7 +316,7 @@ def status(adb, m):
     label = {m['source_sha256']: '원본 상태', m['target_sha256']: '검증된 한글 수정본 설치 상태', None: 'main OBB 없음'}.get(h, '지원하지 않는 파일 또는 다른 수정본')
     b = adb.hash(backup, missing_ok=True)
     p = adb.hash(patch, missing_ok=True)
-    report = {'game': '1.2.2 / 473002', 'state': label, 'main_sha256': h,
+    report = {'game': '1.2.3 / 478362', 'state': label, 'main_sha256': h,
               'device_original_backup_valid': b == m['source_sha256'],
               'patch_obb_original': p == m['patch_sha256']}
     say(json.dumps(report, ensure_ascii=False, indent=2))
@@ -481,7 +481,7 @@ def restore(adb, m, work):
 def main(argv=None):
     if sys.version_info < (3, 10):
         raise PatchError('Python 3.10 이상이 필요합니다.')
-    parser = argparse.ArgumentParser(description='ITR2 Quest 1.2.2 한글패치 — 공개 전 검토본')
+    parser = argparse.ArgumentParser(description='ITR2 Quest 1.2.3 한글패치 — 공개 전 검토본')
     parser.add_argument('command', nargs='?', default='install', choices=['status', 'install', 'restore', 'build', 'verify', 'prepare'])
     parser.add_argument('--adb', help='adb.exe 경로')
     parser.add_argument('--serial', help='대상 ADB 기기')
@@ -490,7 +490,7 @@ def main(argv=None):
     parser.add_argument('--output', type=Path, help='build: 생성할 main OBB')
     args = parser.parse_args(argv)
     m, _ = load_release()
-    say('공개 전 검토본: 원 번역 제작자의 배포 허락 확인은 별도로 필요합니다.')
+    say('Into the Radius 2 Quest 한글패치 | 제작: 제콜 | 번역 문자열: refracta/itr2-ko (사용 동의 완료)')
     if args.command == 'prepare':
         say('연결 도구: ' + prepare_adb())
         return 0

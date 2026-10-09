@@ -1,8 +1,8 @@
 {
   "format": 1,
   "name": "ITR2 Quest Korean",
-  "release": "1.2.4-rc.2",
-  "publication_status": "REVIEW_UNPUBLISHED",
+  "release": "1.2.4",
+  "publication_status": "PUBLIC_RELEASE",
   "package": "com.CMGames.IntoTheRadius2",
   "version_code": 480012,
   "version_name": "1.2.4",

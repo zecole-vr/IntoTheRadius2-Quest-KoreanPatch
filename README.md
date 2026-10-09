@@ -6,7 +6,7 @@
 - 지원 게임: **1.2.4 (480012)**
 - 설치 파일: **ITR2_Quest_v1.2.4-rc.2.exe**
 
-현재 EXE의 릴리스 첨부를 준비 중입니다. 기존 ZIP은 이전 설치본입니다.
+현재 설치본은 릴리스 초안에 첨부된 EXE입니다. 공개 전 검토 상태입니다.
 
 ## 번역 출처 및 제작
 
@@ -19,7 +19,7 @@ Quest 버전 제작: **VR 유튜브 크리에이터 제콜 (ZECOLE)**
 
 Windows 10/11 64비트 PC, Microsoft Edge WebView2 Runtime, 지원 버전의 게임이 설치된 Quest, USB 데이터 케이블을 준비해 주세요. PC에는 최소 12GiB, Quest에는 최소 5GB의 여유 공간이 필요합니다.
 
-1. [릴리스](https://github.com/zecole-vr/IntoTheRadius2-Quest-KoreanPatch/releases)에 첨부될 **ITR2_Quest_v1.2.4-rc.2.exe**를 내려받아 실행합니다. 압축 해제는 필요 없습니다. GitHub의 Source code ZIP은 설치본이 아닙니다.
+1. [릴리스](https://github.com/zecole-vr/IntoTheRadius2-Quest-KoreanPatch/releases)에 첨부된 **ITR2_Quest_v1.2.4-rc.2.exe**를 내려받아 실행합니다. 압축 해제는 필요 없습니다. GitHub의 Source code ZIP은 설치본이 아닙니다.
 2. Quest의 개발자 모드를 켜고 게임을 완전히 종료합니다.
 3. Quest를 PC에 USB로 연결하고 헤드셋에서 **USB 디버깅을 허용**합니다.
 4. **한글패치 설치 / 업데이트** 버튼을 누릅니다.

@@ -1,5 +1,7 @@
-# 라이선스
+# 라이선스 안내
 
-INSTALLER-MIT.txt는 설치 도구와 배치 파일에만 적용됩니다.
-NotoSansKR-OFL.txt는 폰트, Python-LICENSE.txt와 PyInstaller-COPYING.txt는 실행 도구 구성 요소의 고지입니다.
-번역 및 게임 자산의 재배포 권리는 별도로 확인해야 합니다.
+현재 단일 EXE에 포함된 폰트 및 소프트웨어의 저작권 고지와 라이선스입니다.
+
+폰트: [NotoSansKR-OFL.txt](NotoSansKR-OFL.txt). 기타 구성 요소: [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md).
+
+설치 프로그램에서도 설치·복구 안내 → 출처 · 라이선스 보기로 열 수 있습니다.

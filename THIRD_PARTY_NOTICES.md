@@ -28,3 +28,14 @@ ADB는 별도로 내려받으며 Google의 SDK 약관과 해당 배포본의 NOT
 약관: https://developer.android.com/studio/terms
 
 Into the Radius 2 및 게임 자산의 권리는 해당 권리자에게 있습니다. 이 패치는 비공식 커뮤니티 패치입니다.
+
+## 런처 구성 요소
+
+pywebview, Python.NET, clr_loader, cffi, pycparser, bottle, proxy_tools, typing_extensions, packaging의 고지 및 라이선스를 `licenses` 하위 폴더에 포함했습니다. 버전 목록은 `licenses/dependencies.json`입니다.
+
+Microsoft WebView2 SDK의 고지 및 사용 조건: `licenses/WebView2-LICENSE.txt`, `licenses/WebView2-NOTICE.txt`. 설치된 Microsoft Edge WebView2 Runtime을 사용하며 런타임 자체를 배포하지 않습니다.
+
+배너는 Into the Radius 2 공식 Steam 상점 배경 이미지입니다. 게임 및 이미지의 권리는 CM IMMERSIVE 등 해당 권리자에게 있습니다.
+출처: https://store.steampowered.com/app/2307350/Into_the_Radius_2/
+
+Setuptools 및 포함된 vendor 구성 요소 고지: `licenses/setuptools`.

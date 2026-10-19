@@ -2,9 +2,9 @@
 
 **Meta Quest · Standalone**용 비공식 한글패치입니다.
 
-- 패치 버전: **1.2.4**
-- 지원 게임: **1.2.4 (480012)**
-- 설치 파일: **ITR2_Quest_v1.2.4.exe**
+- 패치 버전: **1.2.5**
+- 지원 게임: **1.2.5 (483352)**
+- 설치 파일: **ITR2_Quest_v1.2.5.exe**
 
 현재 설치본은 공개 릴리스에 첨부된 EXE입니다. 로그인 없이 내려받을 수 있습니다.
 
@@ -19,7 +19,7 @@ Quest 버전 제작: **VR 유튜브 크리에이터 제콜 (ZECOLE)**
 
 Windows 10/11 64비트 PC, Microsoft Edge WebView2 Runtime, 지원 버전의 게임이 설치된 Quest, USB 데이터 케이블을 준비해 주세요. PC에는 최소 12GiB, Quest에는 최소 5GB의 여유 공간이 필요합니다.
 
-1. [릴리스](https://github.com/zecole-vr/IntoTheRadius2-Quest-KoreanPatch/releases)에 첨부된 **ITR2_Quest_v1.2.4.exe**를 내려받아 실행합니다. 압축 해제는 필요 없습니다. GitHub의 Source code ZIP은 설치본이 아닙니다.
+1. [릴리스](https://github.com/zecole-vr/IntoTheRadius2-Quest-KoreanPatch/releases)에 첨부된 **ITR2_Quest_v1.2.5.exe**를 내려받아 실행합니다. 압축 해제는 필요 없습니다. GitHub의 Source code ZIP은 설치본이 아닙니다.
 2. Quest의 개발자 모드를 켜고 게임을 완전히 종료합니다.
 3. Quest를 PC에 USB로 연결하고 헤드셋에서 **USB 디버깅을 허용**합니다.
 4. **한글패치 설치 / 업데이트** 버튼을 누릅니다.
@@ -29,7 +29,7 @@ Python이나 SideQuest를 별도로 설치할 필요는 없습니다. ADB가 없
 
 설치 중에는 USB 케이블을 분리하거나 게임을 실행하지 마세요. 일부 문구는 영어로 표시될 수 있습니다.
 
-최신 설치 파일은 위 GitHub 릴리스 페이지에서 확인해 주세요.
+런처를 실행하거나 **다시 확인**을 누르면 GitHub의 최신 정식 버전을 확인합니다. 새 버전이 있으면 **최신 설치본 받기** 버튼으로 다운로드 페이지를 열고, 새 EXE를 내려받아 실행해 주세요. 기존 EXE의 자동 다운로드·교체 기능은 없습니다.
 
 ## 제거 · 원본 복구
 
@@ -61,12 +61,8 @@ Copyright 2014–2021 Adobe. Reserved Font Name: “Source”.
 
 ## 이번 버전
 
-- 공개 배포본이 없다고 표시되던 버전 인식 문제를 수정했습니다.
-
-- ZIP 압축 해제 없이 실행하는 단일 EXE 설치 프로그램을 제공합니다.
-- 적 음성 자막을 추가하고 일부 대사를 수정했습니다.
-- 설치·제거 안내와 백업 경로 표시를 정리했습니다.
-
-새 EXE의 실제 Quest 설치·업데이트·제거 및 최종 자막 플레이 검증이 남아 있는 검토본입니다. [검증 상태](VALIDATION.md)
+- Quest 단독판 **1.2.5 (483352)**에 대응합니다.
+- 기존 한글 번역과 적 음성 자막을 포함합니다.
+- 설치기 지원 버전 및 설치·복구 안내를 갱신했습니다.
 
 문의: [버그 제보 / 수정 요청](https://github.com/zecole-vr/IntoTheRadius2-Quest-KoreanPatch/issues/new)

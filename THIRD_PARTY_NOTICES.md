@@ -14,7 +14,7 @@ Copyright 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name 'Sour
 
 저작권 고지 및 라이선스 전문: `licenses/NotoSansKR-OFL.txt`.
 
-## 포함 소프트웨어
+## Windows 설치기에 포함된 소프트웨어
 
 - 설치 스크립트 및 배치 파일: `licenses/INSTALLER-MIT.txt`. 번역, 폰트, 게임 및 패치 데이터에는 이 MIT 라이선스를 적용하지 않습니다.
 - Python 런타임 및 관련 구성 요소: `licenses/Python-LICENSE.txt`.
@@ -29,7 +29,7 @@ ADB는 별도로 내려받으며 Google의 SDK 약관과 해당 배포본의 NOT
 
 Into the Radius 2 및 게임 자산의 권리는 해당 권리자에게 있습니다. 이 패치는 비공식 커뮤니티 패치입니다.
 
-## 런처 구성 요소
+## Windows 런처 구성 요소
 
 pywebview, Python.NET, clr_loader, cffi, pycparser, bottle, proxy_tools, typing_extensions, packaging의 고지 및 라이선스를 `licenses` 하위 폴더에 포함했습니다. 버전 목록은 `licenses/dependencies.json`입니다.
 
@@ -39,3 +39,9 @@ Microsoft WebView2 SDK의 고지 및 사용 조건: `licenses/WebView2-LICENSE.t
 출처: https://store.steampowered.com/app/2307350/Into_the_Radius_2/
 
 Setuptools 및 포함된 vendor 구성 요소 고지: `licenses/setuptools`.
+
+## Android 휴대폰 설치판
+
+Android ZIP에는 Windows 런타임·ADB·WebView2를 포함하지 않습니다. Quest의 Android 실행 환경을 사용하며 Bugjaeger는 사용자가 별도로 설치하는 앱입니다.
+
+포함 구성 요소의 출처와 적용 범위는 [Android 고지](android/THIRD_PARTY_NOTICES.txt), 설치 코드의 라이선스 전문은 [Android 설치 코드 라이선스](android/INSTALLER-MIT.txt)를 참고해 주세요. 번역문·폰트·게임 자산·패치 데이터에는 설치 코드의 MIT 라이선스를 일괄 적용하지 않습니다.

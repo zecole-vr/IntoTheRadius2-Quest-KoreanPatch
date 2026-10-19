@@ -1,6 +1,8 @@
 Into the Radius 2 Quest 한글패치 — 단일 EXE
 패치 v1.2.5 / Meta Quest · Standalone / 지원 게임 1.2.5 (483352)
 
+이 문서는 Windows PC용입니다. 휴대폰 설치는 설치방법_Android.txt를 참고하세요.
+
 설치
 1. ITR2_Quest_v1.2.5.exe를 실행합니다. 압축을 풀 필요가 없습니다.
 2. Quest의 개발자 모드를 켜고 USB로 연결합니다.

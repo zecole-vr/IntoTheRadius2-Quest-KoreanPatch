@@ -1,0 +1,130 @@
+﻿Into the Radius 2 — 제콜 한글패치 / Android 휴대폰 설치판
+
+지원 게임: Meta Quest 단독판 1.2.5 (483352)
+한글패치 버전: 1.2.5 / 모바일 설치 도구: 1.0.0
+파일: ITR2_Quest_Android_v1.2.5.zip
+
+Android 휴대폰과 Quest를 USB로 직접 연결해 설치합니다.
+PC는 필요 없습니다. iPhone에서는 이 설치 방법을 사용할 수 없습니다.
+게임이 업데이트되면 해당 게임 버전용 한글패치가 나올 때까지 사용할 수 없습니다.
+
+1. 준비물
+
+- USB OTG/호스트 기능을 지원하는 Android 휴대폰
+- Meta Quest 단독판 1.2.5 (483352)가 설치된 Quest
+- 두 기기를 연결할 USB 데이터 케이블. 충전 전용 케이블은 사용할 수 없습니다.
+- 휴대폰 앱: Bugjaeger Mobile ADB - USB OTG
+  공식 설치 주소: https://play.google.com/store/apps/details?id=eu.sisik.hackendebug
+- Quest의 개발자 모드와 USB 디버깅 허용
+- Quest 여유 공간: 원본 백업이 없으면 9GB 이상, 유효한 백업이 이미 있으면 5GB 이상
+- 휴대폰 여유 공간: 30MB 이상 권장
+
+다운로드 및 앱 준비에는 인터넷이 필요합니다. 파일 전송을 마친 뒤 패치 작업은 오프라인으로 가능합니다.
+Python, PC용 ADB, Java를 따로 설치할 필요는 없습니다.
+Bugjaeger는 별도 앱이며 이 ZIP에 포함되어 있지 않습니다.
+
+2. 휴대폰과 Quest 연결
+
+① 휴대폰에 Bugjaeger와 위 ZIP 파일을 받습니다. ZIP 이름은 바꾸지 마세요.
+② Quest에서 게임을 완전히 종료합니다. 설치·복구 중에는 게임이나 스토어 업데이트를 실행하지 마세요.
+③ 휴대폰과 Quest를 USB 데이터 케이블로 직접 연결합니다.
+④ 휴대폰에서 Bugjaeger의 USB 기기 접근을 허용합니다.
+⑤ Quest 안에 표시되는 USB 디버깅 요청을 허용합니다.
+⑥ Bugjaeger의 연결 대상이 Quest인지 확인합니다. 휴대폰 자체를 대상으로 실행하지 마세요.
+
+Quest가 목록에 없으면 데이터 케이블과 USB 접근 허용 상태를 확인하고 다시 연결하세요.
+
+3. ZIP 전송 및 압축 해제
+
+Bugjaeger의 파일 전송 기능으로 휴대폰에 받은 ZIP을 Quest의 다음 위치에 보냅니다.
+
+/sdcard/Download/ITR2_Quest_Android_v1.2.5.zip
+
+아래 명령은 모두 Bugjaeger의 Quest 셸(명령 실행) 화면에 한 줄씩 붙여넣습니다.
+휴대폰 터미널이나 Quest 주소 입력창에 넣는 명령이 아닙니다.
+
+압축 해제:
+
+test ! -e /sdcard/Download/ITR2_Quest_Android_v1.2.5 && unzip /sdcard/Download/ITR2_Quest_Android_v1.2.5.zip -d /sdcard/Download
+
+이미 같은 폴더가 있으면 이 명령은 덮어쓰지 않습니다. 이전에 정상적으로 준비한 폴더라면 아래 파일 검사를 진행하세요.
+
+전송 파일 검사:
+
+cd /sdcard/Download/ITR2_Quest_Android_v1.2.5 && sha256sum -c SHA256SUMS.txt
+
+모든 항목이 OK인지 확인합니다. FAILED 또는 파일 없음이 나오면 설치하지 말고 전송·압축 해제 상태를 확인하세요.
+GitHub의 Source code ZIP은 설치 파일이 아닙니다. Android용 이름의 ZIP을 사용하세요.
+
+4. 한글패치 설치
+
+게임이 종료된 상태에서 실행합니다.
+
+sh /sdcard/Download/ITR2_Quest_Android_v1.2.5/mobile.sh install
+
+STARTED=install이 나오면 작업이 시작된 것입니다. 아직 설치 완료가 아닙니다.
+파일 생성과 검사에 몇 분 걸릴 수 있습니다. 아래 명령으로 진행 상황을 확인하세요.
+
+sh /sdcard/Download/ITR2_Quest_Android_v1.2.5/mobile.sh log
+
+로그 맨 아래의 최신 BEGIN install 작업을 확인합니다.
+RESULT=INSTALLED 또는 RESULT=ALREADY_INSTALLED가 나오고 END install까지 표시되면 완료입니다.
+완료 후 게임을 실행하면 됩니다. 한국어를 따로 선택할 필요는 없습니다.
+완료 전에는 케이블을 분리하거나 게임을 실행하지 마세요. 같은 설치 명령을 반복해서 누르지 마세요.
+
+5. 제거 · 원본 복구
+
+게임을 완전히 종료하고 휴대폰과 Quest를 연결한 뒤 실행합니다.
+
+sh /sdcard/Download/ITR2_Quest_Android_v1.2.5/mobile.sh restore
+
+진행 확인:
+
+sh /sdcard/Download/ITR2_Quest_Android_v1.2.5/mobile.sh log
+
+최신 BEGIN restore 작업에서 RESULT=RESTORED 또는 RESULT=ALREADY_ORIGINAL,
+그리고 END restore가 표시되면 완료입니다. 게임 파일을 원본으로 복구하며 세이브 진행 상황은 되돌리지 않습니다.
+다시 한글패치를 적용하려면 4번의 install 명령을 사용하세요.
+
+6. 기존 설치본과 백업
+
+- 같은 게임 버전용 모바일 시험본 3·4의 유효한 원본 백업과 설치 기록을 그대로 사용합니다.
+  이후 설치·복구 명령은 이 배포판의 경로로 실행하세요.
+- Windows EXE의 PC 설치 기록을 자동으로 가져오지는 않습니다.
+  같은 1.2.5 패치와 원본 백업이 Quest에 있으면 install을 한 번 실행해 파일을 검증하고 모바일 기록을 만듭니다.
+  RESULT=ALREADY_INSTALLED가 나온 뒤에는 모바일 restore를 사용할 수 있습니다.
+- 다른 버전 또는 알 수 없는 파일은 자동으로 덮어쓰지 않습니다.
+- 원본 백업은 Quest의 다음 파일입니다. 삭제하지 마세요.
+  /sdcard/Android/obb/com.CMGames.IntoTheRadius2/main.483352.com.CMGames.IntoTheRadius2.obb.questko-original
+- 설치·복구 기록은 같은 게임 폴더의 .zecole-mobile-483352에 보관됩니다.
+  ZIP을 옮기거나 다시 받아도 백업과 기록은 유지됩니다. 게임 삭제 시에는 함께 사라질 수 있습니다.
+- 작업 로그는 압축을 푼 폴더의 mobile.log입니다. 문제가 있으면 폴더를 지우기 전에 로그를 보관해 주세요.
+
+7. 오류가 나온 경우
+
+RESULT=FAIL 또는 FAILED가 나오면 설치·복구를 반복하지 말고 오류 문구와 mobile.log를 확인해 주세요.
+잠금 파일, 원본 백업, 설치 기록, 임시 파일을 임의로 지우지 마세요.
+지원 버전이 다르다고 나오면 해당 게임 버전용 패치가 필요합니다.
+게임 실행 중이라는 안내가 나오면 게임을 완전히 종료한 뒤 다시 시도하세요.
+
+연결이 끊기거나 작업이 중단됐다면 다시 연결하고 게임을 종료한 뒤 아래 점검 명령을 실행할 수 있습니다.
+
+sh /sdcard/Download/ITR2_Quest_Android_v1.2.5/mobile.sh check
+
+위 log 명령으로 결과를 확인하세요. 점검은 중단 기록이 있으면 검증 가능한 상태에서 복구를 시도합니다.
+오류가 계속되면 로그와 함께 문의해 주세요.
+https://github.com/zecole-vr/IntoTheRadius2-Quest-KoreanPatch/issues/new
+
+8. 번역 출처 · 제작 · 폰트
+
+https://github.com/refracta/itr2-ko PCVR 한글패치 제작자의 동의를 받아
+번역 문자열을 사용하여 Quest 버전으로 제작했습니다. 도움에 감사드립니다.
+
+제작: VR 유튜브 크리에이터 제콜 (ZECOLE)
+https://www.youtube.com/@zecole
+https://github.com/zecole-vr/IntoTheRadius2-Quest-KoreanPatch
+
+폰트: Noto Sans KR
+Copyright 2014–2021 Adobe. Reserved Font Name: Source.
+SIL Open Font License 1.1. 전문은 NotoSansKR-OFL.txt에 동봉했습니다.
+기타 구성 요소의 출처와 라이선스 범위는 THIRD_PARTY_NOTICES.txt를 참고해 주세요.

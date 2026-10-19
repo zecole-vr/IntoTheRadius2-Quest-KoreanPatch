@@ -1,0 +1,31 @@
+﻿Into the Radius 2 Quest 한글패치 — Android 휴대폰 설치판
+
+번역
+https://github.com/refracta/itr2-ko PCVR 한글패치 제작자의 동의를 받아 번역 문자열을 사용했습니다.
+도움에 감사드립니다. 번역 데이터에는 설치 코드의 MIT 라이선스를 일괄 적용하지 않습니다.
+
+제작
+VR 유튜브 크리에이터 제콜 (ZECOLE)
+https://www.youtube.com/@zecole
+https://github.com/zecole-vr/IntoTheRadius2-Quest-KoreanPatch
+
+폰트
+Noto Sans KR 및 패치에 사용된 수정본: SIL Open Font License 1.1.
+Copyright 2014–2021 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'.
+동봉한 NotoSansKR-OFL.txt에 저작권 고지 및 라이선스 전문이 있습니다.
+
+설치 코드
+QuestBuild.java, QuestMobile.java 및 mobile.sh: INSTALLER-MIT.txt.
+이 라이선스는 번역문, 폰트, 게임 자산 및 패치 데이터에는 적용하지 않습니다.
+
+별도로 준비하거나 기기에 설치된 구성 요소
+Bugjaeger Mobile ADB - USB OTG는 Roman Sisik의 별도 앱입니다.
+https://play.google.com/store/apps/details?id=eu.sisik.hackendebug
+Bugjaeger 자체를 이 ZIP에 재배포하지 않습니다.
+Quest의 Android 실행 환경을 사용합니다. Java 런타임, PC용 ADB, Python은 포함하지 않습니다.
+개발에 사용한 JDK 및 R8/D8 빌드 도구는 이 ZIP에 포함하지 않습니다.
+
+게임
+Into the Radius 2 및 게임 자산의 권리는 해당 권리자에게 있습니다.
+이 패치는 비공식 커뮤니티 패치이며, 본인 기기에 설치된 지원 버전의 게임 원본이 필요합니다.
+원본 게임 전체 및 LastResort 원본 폰트 전체는 동봉하지 않습니다.

@@ -9,16 +9,16 @@
 - 지원 게임: **1.2.5 (483352)**
 - Android 설치 도구 버전: **1.0.0**
 
-## 다운로드
+## 설치 방법 고르기
 
-게임은 두 설치 방법 모두 **Quest 단독판**입니다. 사용할 기기에 맞는 파일을 받으세요. 로그인 없이 내려받을 수 있습니다.
+게임은 두 설치 방법 모두 **Quest 단독판**입니다. 설치에 사용할 기기에 맞춰 고르세요.
 
-| 설치에 사용할 기기 | 설치 파일 | 상세 안내 |
+| 설치에 사용할 기기 | 사용할 것 | 상세 안내 |
 | --- | --- | --- |
-| Windows PC | [ITR2_Quest_v1.2.5.exe](https://github.com/zecole-vr/IntoTheRadius2-Quest-KoreanPatch/releases/download/v1.2.5/ITR2_Quest_v1.2.5.exe) | [Windows 설치·복구](설치방법.txt) |
+| Windows PC | [ZECOLE VR 런처](https://github.com/zecole-vr/zecole-launcher/releases/latest/download/ZECOLE_Launcher.exe) | 아래 **Windows PC로 설치** |
 | Android 휴대폰 | [ITR2_Quest_Android_v1.2.5.zip](https://github.com/zecole-vr/IntoTheRadius2-Quest-KoreanPatch/releases/download/v1.2.5/ITR2_Quest_Android_v1.2.5.zip) | [휴대폰 설치·복구](설치방법_Android.txt) |
 
-각 파일의 SHA-256 체크섬은 [같은 릴리스](https://github.com/zecole-vr/IntoTheRadius2-Quest-KoreanPatch/releases/tag/v1.2.5)의 `.sha256` 파일에서 확인할 수 있습니다. GitHub의 **Source code ZIP은 설치본이 아닙니다.**
+Android ZIP의 SHA-256 체크섬은 [같은 릴리스](https://github.com/zecole-vr/IntoTheRadius2-Quest-KoreanPatch/releases/tag/v1.2.5)의 `.sha256` 파일에서 확인할 수 있습니다. GitHub의 **Source code ZIP은 설치본이 아닙니다.**
 
 ## 번역 출처 및 제작
 
@@ -29,31 +29,31 @@ Quest 버전 제작: **VR 유튜브 크리에이터 제콜 (ZECOLE)**
 
 ## Windows PC로 설치
 
-Windows 10/11 64비트 PC, Microsoft Edge WebView2 Runtime, 지원 버전의 게임이 설치된 Quest, USB 데이터 케이블을 준비해 주세요. PC에는 최소 12GiB, Quest에는 최소 5GB의 여유 공간이 필요합니다.
+Windows 10/11 64비트 PC, Microsoft Edge WebView2 Runtime, .NET Framework 4.8, 지원 버전의 게임이 설치된 Quest, USB 데이터 케이블을 준비해 주세요. PC에는 최소 12GiB, Quest에는 최소 5GB의 여유 공간이 필요합니다.
 
-1. [릴리스](https://github.com/zecole-vr/IntoTheRadius2-Quest-KoreanPatch/releases)에 첨부된 **ITR2_Quest_v1.2.5.exe**를 내려받아 실행합니다. 압축 해제는 필요 없습니다. GitHub의 Source code ZIP은 설치본이 아닙니다.
+1. [ZECOLE VR 런처](https://github.com/zecole-vr/zecole-launcher/releases/latest/download/ZECOLE_Launcher.exe)를 실행하고 왼쪽 목록에서 **Into the Radius 2**를 고릅니다.
 2. Quest의 개발자 모드를 켜고 게임을 완전히 종료합니다.
 3. Quest를 PC에 USB로 연결하고 헤드셋에서 **USB 디버깅을 허용**합니다.
-4. **한글패치 설치 / 업데이트** 버튼을 누릅니다.
+4. **한글패치 설치** 버튼을 누릅니다.
 5. 완료 안내 후 게임을 실행합니다. 한국어를 따로 선택할 필요는 없습니다.
 
-Python이나 SideQuest를 별도로 설치할 필요는 없습니다. ADB가 없으면 약관 동의 후 자동 다운로드하며 이때 인터넷 연결이 필요합니다. WebView2가 없다면 [Microsoft 공식 페이지](https://developer.microsoft.com/microsoft-edge/webview2/)에서 Runtime을 설치해 주세요.
+ADB가 없으면 약관 동의 후 자동 다운로드하며 이때 인터넷 연결이 필요합니다. WebView2가 없다면 [Microsoft 공식 페이지](https://developer.microsoft.com/microsoft-edge/webview2/)에서 Runtime을 설치해 주세요.
 
 설치 중에는 USB 케이블을 분리하거나 게임을 실행하지 마세요. 일부 문구는 영어로 표시될 수 있습니다.
 
-런처를 실행하거나 **다시 확인**을 누르면 GitHub의 최신 정식 버전을 확인합니다. 새 버전이 있으면 **최신 설치본 받기** 버튼으로 다운로드 페이지를 열고, 새 EXE를 내려받아 실행해 주세요. 기존 EXE의 자동 다운로드·교체 기능은 없습니다.
+새 한글패치 버전이 나오면 런처가 **업데이트 있음**으로 알려 주며, 같은 화면에서 설치하면 됩니다.
 
 ## Windows PC에서 제거 · 원본 복구
 
 1. 게임을 완전히 종료하고 Quest를 PC에 USB로 연결합니다.
-2. USB 디버깅을 허용한 뒤 설치에 사용한 EXE를 실행합니다.
-3. **제거 · 원본 복구** 버튼을 누릅니다.
+2. USB 디버깅을 허용한 뒤 런처에서 **Into the Radius 2**를 고릅니다.
+3. **원본 복구** 버튼을 누릅니다.
 4. 완료 안내 후 게임을 실행합니다.
 
 게임 파일을 원본으로 복구하며 세이브 진행 상황은 되돌리지 않습니다. 지원 버전과 유효한 원본 백업이 필요합니다.
 
 백업 및 설치 기록: **%LOCALAPPDATA%\ZECOLE\ITR2QuestPatch\userdata**  
-%LOCALAPPDATA%는 현재 Windows 사용자의 AppData\Local 폴더입니다. EXE를 옮기거나 다시 내려받아도 기록과 백업은 유지됩니다. **설치·복구 안내 → 백업 폴더 열기**에서 확인할 수 있습니다.
+%LOCALAPPDATA%는 현재 Windows 사용자의 AppData\Local 폴더입니다. 예전 설치기 EXE로 설치했어도 런처가 같은 기록과 백업을 이어서 사용합니다.
 
 기존 ZIP 설치본의 userdata 백업은 자동 이전되지 않으므로 보관해 주세요. 기존 ZIP으로 설치한 패치를 복구해야 한다면 해당 ZIP의 복구 도구와 백업을 사용해 주세요.
 
@@ -86,7 +86,7 @@ Windows의 설치 기록은 자동 이전되지 않습니다. 같은 1.2.5 패�
 Copyright 2014–2021 Adobe. Reserved Font Name: “Source”.  
 라이선스: **SIL Open Font License 1.1 (OFL)**.
 
-폰트와 수정본의 저작권 고지 및 라이선스 전문은 [licenses/NotoSansKR-OFL.txt](licenses/NotoSansKR-OFL.txt)에 포함되어 있습니다. EXE에도 포함되어 있으며 **설치·복구 안내 → 출처 · 라이선스 보기**로 열 수 있습니다. Android ZIP에도 `NotoSansKR-OFL.txt`를 동봉했습니다. 런처의 Windows 시스템 글꼴 파일은 재배포하지 않습니다.
+폰트와 수정본의 저작권 고지 및 라이선스 전문은 [licenses/NotoSansKR-OFL.txt](licenses/NotoSansKR-OFL.txt)에 포함되어 있습니다. Android ZIP에도 `NotoSansKR-OFL.txt`를 동봉했습니다. 런처의 Windows 시스템 글꼴 파일은 재배포하지 않습니다.
 
 기타 구성 요소의 고지는 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)를 참고해 주세요.
 
